@@ -5,6 +5,7 @@ const uuidv1 = require('uuid/v1');
 const fs = require ("fs")
 const path = require("path")
 const productsFilePath = path.join(__dirname,"products.json")
+// const
 
 const readFile = () => {
     const buffer = fs.readFileSync(productsFilePath);
@@ -68,6 +69,5 @@ router.delete("/:id",(req,res)=>{
         res.status("404").send("product not found");
     }
 })
-
 
 module.exports = router;
